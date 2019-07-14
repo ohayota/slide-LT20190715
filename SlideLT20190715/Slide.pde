@@ -11,7 +11,7 @@ class Slide {
   Slide(boolean isCover, int number, String title, String subTitle) {
     topBar = new TopBar(height/8, title, subTitle, number);
     bottomBar = new BottomBar(height/12, slideName);
-    textField = new TextField(topBar.barHeight, bottomBar.barHeight, 50, 20);
+    textField = new TextField(topBar.barHeight, bottomBar.barHeight, 50, 40);
     this.number = number;
     this.isCover = isCover;
     this.title = title;
