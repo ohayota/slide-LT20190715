@@ -13,9 +13,10 @@ class TopBar {
   }
   
   void draw() {
-    fill(0, 0, 70);
+    noStroke();
+    fill(navy);
     rect(0, 0, width, barHeight);
-    fill(240);
+    fill(backColor);
     textSize(70);
     textFont(yuGothic70);
     textAlign(LEFT, CENTER);

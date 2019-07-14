@@ -9,6 +9,11 @@ PImage ohayotaSq;
 boolean isKeyTyped;
 String slideName;
 
+color backColor;
+color navy;
+color darkGray;
+color lightGray;
+
 void setup() {
   fullScreen();
   noStroke();
@@ -25,13 +30,20 @@ void setup() {
   isKeyTyped = false;
   slideName = "SlideName";
   
+  backColor = color(240);
+  navy = color(0, 0, 70);
+  darkGray = color(100);
+  lightGray = color(200);
+  
   slides.add(new Slide(true, 0, "Title", "SubTitle"));
   Slide slide1 = new Slide(false, 1, "Title", "SubTitle");
   slides.add(slide1);
 }
 
 void draw() {
-  background(0);
+  background(backColor);
   
   slides.get(slideNum).draw();
+  
+  noLoop();
 }

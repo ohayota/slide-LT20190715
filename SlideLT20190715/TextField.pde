@@ -2,17 +2,29 @@ class TextField {
   
   float topBarHeight;
   float bottomBarHeight;
+  float x;
+  float y;
+  float fieldWidth;
   float fieldHeight;
+  ArrayList<CroppedImage> images;
   
-  TextField(float topBarHeight, float bottomBarHeight) {
+  TextField(float topBarHeight, float bottomBarHeight, float marginX, float marginY) {
     this.topBarHeight = topBarHeight;
     this.bottomBarHeight = bottomBarHeight;
-    fieldHeight = height - (topBarHeight+20) - (bottomBarHeight+20);
+    this.x = marginX;
+    this.y = topBarHeight + marginY;
+    fieldWidth = width - x*2;
+    fieldHeight = height - (y+(bottomBarHeight+marginY));
+    images = new ArrayList<CroppedImage>();
   }
   
   void draw() {
-    fill(230);
-    rect(50, topBarHeight+20, width-100, fieldHeight);
+    pushMatrix();
+    translate(x, y);
+    stroke(darkGray);
+    noFill();
+    rect(0, 0, fieldWidth, fieldHeight);
+    popMatrix();
   }
   
 }
