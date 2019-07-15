@@ -8,13 +8,9 @@ class Text {
     this.level = level;
   }
   
-  void draw(float x, float y) {
+  // 第2レベルなら丸，第3レベルなら線をマーカーとしてテキストの左側に表示
+  void drawMarker(float x, float y) {
     switch (level) {
-      case 1:
-        fill(navy);
-        textFont(yuGothic50);
-        textSize(50);
-        break;
       case 2:
         fill(navy);
         noStroke();
@@ -28,6 +24,25 @@ class Text {
         strokeCap(SQUARE);
         strokeWeight(4);
         line(x-50, y+15, x-20, y+15);
+        break;
+      default:
+        return;
+    }
+  }
+  
+  void drawText(float x, float y) {
+    switch (level) {
+      case 1:
+        fill(navy);
+        textFont(yuGothic50);
+        textSize(50);
+        break;
+      case 2:
+        fill(darkGray);
+        textFont(yuGothic50);
+        textSize(40);
+        break;
+      case 3:
         fill(darkGray);
         textFont(yuGothic30);
         textSize(30);
@@ -37,6 +52,11 @@ class Text {
     }
     textAlign(LEFT, TOP);
     text(text, x, y);
+  }
+  
+  void draw(float x, float y) {
+    drawMarker(x, y);
+    drawText(x, y);
   }
   
 }

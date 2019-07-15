@@ -16,8 +16,7 @@ class CroppedImage {
     this.isReflect = isReflect;
   }
   
-  void draw() {
-    // 画像を表示
+  void drawBaseImage() {
     pushMatrix();
     if (isReflect) {
       translate(x, y);
@@ -25,17 +24,16 @@ class CroppedImage {
     } else {
       translate(x, y);
     }
-    //line(-width, 0, width, 0);
-    //line(0, -height, 0, height);
     image(image, 0, 0, size, size);
     popMatrix();
-    
-    // 円状に図形を切り抜く
-    fill(back);
-    noStroke();
-    
+  }
+  
+  // 正方形の中を円形に切り抜く
+  void drawCroppedShape() {
     pushMatrix();
     translate(x, y);
+    fill(back);
+    noStroke();
     beginShape();
     // 図形の外枠
     vertex(-(size/2+1), -(size/2+1));
@@ -49,12 +47,22 @@ class CroppedImage {
     }
     endContour();
     endShape(CLOSE);
+    popMatrix();
+  }
+  
+  void drawFrame() {
     // 切り抜いた画像の枠を描画
     noFill();
     strokeWeight(5);
     stroke(navy);
-    ellipse(0, 0, size, size);
-    popMatrix();
+    ellipse(x, y, size, size);
+  }
+  
+  // 正確には画像自体を切り抜くのではなく，切り抜いた図形を画像の上に描画する
+  void draw() {
+    drawBaseImage();
+    drawCroppedShape();
+    drawFrame();
   }
   
 }

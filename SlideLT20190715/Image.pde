@@ -16,8 +16,7 @@ class Image {
     this.isReflect = isReflect;
   }
   
-  void draw() {
-    // 画像を表示
+  void drawImage() {
     pushMatrix();
     if (isReflect) {
       translate(x, y);
@@ -25,14 +24,20 @@ class Image {
     } else {
       translate(x, y);
     }
-    //line(-width, 0, width, 0);
-    //line(0, -height, 0, height);
     image(image, 0, 0, size, size);
+    popMatrix();
+  }
+  
+  void drawFrame() {
     noFill();
     strokeWeight(5);
     stroke(navy);
-    rect(-size/2, -size/2, size, size);
-    popMatrix();
+    rect(x-size/2, y-size/2, size, size);
+  }
+  
+  void draw() {
+    drawImage();
+    drawFrame();
   }
   
 }

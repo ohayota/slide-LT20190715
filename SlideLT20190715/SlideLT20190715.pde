@@ -51,6 +51,10 @@ void setup() {
   recurDivSq2 = loadImage("recurDivSq2.jpg");
   recurDivSq3 = loadImage("recurDivSq3.jpg");
   
+  createSlides();
+}
+
+void createSlides() {
   slides.add(new Slide(true, 0, "\"ロジカルにカオスと戯れよう\"\nジェネラティブアート入門", "ohayota(@ohayoooota)"));
   
   Slide slide1 = new Slide(false, 1, "自己紹介", "");

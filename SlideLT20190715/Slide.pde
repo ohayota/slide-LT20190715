@@ -18,19 +18,27 @@ class Slide {
     this.subTitle = subTitle;
   }
   
+  void drawTitle() {
+    fill(navy);
+    textFont(yuGothic90);
+    textSize(90);
+    textAlign(CENTER, TOP);
+    text(title, width/2, height/2-160);
+  }
+  
+  void drawSubTitle() {
+    fill(darkGray);
+    textFont(yuGothic70);
+    textSize(50);
+    textAlign(CENTER, TOP);
+    text(subTitle, width/2, height/2+160);
+  }
+  
   void draw() {
     background(backColor);
     if (isCover) {
-      fill(navy);
-      textFont(yuGothic90);
-      textSize(90);
-      textAlign(CENTER, TOP);
-      text(title, width/2, height/2-160);
-      fill(darkGray);
-      textFont(yuGothic70);
-      textSize(50);
-      textAlign(CENTER, TOP);
-      text(subTitle, width/2, height/2+160);
+      drawTitle();
+      drawSubTitle();
     } else {
       topBar.draw();
       bottomBar.draw();
