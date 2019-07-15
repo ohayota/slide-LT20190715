@@ -19,7 +19,7 @@ class Slide {
   }
   
   void drawTitle() {
-    fill(navy);
+    fill(mainColor);
     textFont(yuGothic90);
     textSize(90);
     textAlign(CENTER, TOP);
@@ -27,7 +27,7 @@ class Slide {
   }
   
   void drawSubTitle() {
-    fill(darkGray);
+    fill(subColor1);
     textFont(yuGothic70);
     textSize(50);
     textAlign(CENTER, TOP);

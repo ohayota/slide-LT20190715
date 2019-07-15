@@ -54,7 +54,7 @@ class CroppedImage {
     // 切り抜いた画像の枠を描画
     noFill();
     strokeWeight(5);
-    stroke(navy);
+    stroke(mainColor);
     ellipse(x, y, size, size);
   }
   

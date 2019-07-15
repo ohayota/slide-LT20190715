@@ -31,7 +31,7 @@ class Image {
   void drawFrame() {
     noFill();
     strokeWeight(5);
-    stroke(navy);
+    stroke(mainColor);
     rect(x-size/2, y-size/2, size, size);
   }
   

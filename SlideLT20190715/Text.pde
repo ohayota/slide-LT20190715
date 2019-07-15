@@ -12,15 +12,15 @@ class Text {
   void drawMarker(float x, float y) {
     switch (level) {
       case 2:
-        fill(navy);
+        fill(mainColor);
         noStroke();
         ellipse(x-35, y+20, 25, 25);
-        fill(darkGray);
+        fill(subColor1);
         textFont(yuGothic50);
         textSize(40);
         break;
       case 3:
-        stroke(navy);
+        stroke(mainColor);
         strokeCap(SQUARE);
         strokeWeight(4);
         line(x-50, y+15, x-20, y+15);
@@ -33,17 +33,17 @@ class Text {
   void drawText(float x, float y) {
     switch (level) {
       case 1:
-        fill(navy);
+        fill(mainColor);
         textFont(yuGothic50);
         textSize(50);
         break;
       case 2:
-        fill(darkGray);
+        fill(subColor1);
         textFont(yuGothic50);
         textSize(40);
         break;
       case 3:
-        fill(darkGray);
+        fill(subColor1);
         textFont(yuGothic30);
         textSize(30);
         break;

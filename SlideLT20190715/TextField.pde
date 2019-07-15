@@ -6,8 +6,8 @@ class TextField {
   float y;
   float fieldWidth;
   float fieldHeight;
-  ArrayList<CroppedImage> images;
-  ArrayList<Image> imgs;
+  ArrayList<CroppedImage> cImages;
+  ArrayList<Image> images;
   ArrayList<Text> texts;
   
   TextField(float topBarHeight, float bottomBarHeight, float marginX, float marginY) {
@@ -17,14 +17,14 @@ class TextField {
     this.y = topBarHeight + marginY;
     fieldWidth = width - marginX*2;
     fieldHeight = height - (y+bottomBarHeight+marginY);
-    images = new ArrayList<CroppedImage>();
-    imgs = new ArrayList<Image>();
+    cImages = new ArrayList<CroppedImage>();
+    images = new ArrayList<Image>();
     texts = new ArrayList<Text>();
   }
   
   void drawImages() {
-    for (CroppedImage img: images) img.draw();
-    for (Image img: imgs) img.draw();
+    for (CroppedImage img: cImages) img.draw();
+    for (Image img: images) img.draw();
   }
   
   void drawTexts() {
@@ -45,7 +45,11 @@ class TextField {
             textY += 70;
             break;
           case 2:
-            if (beforeLevel != 2) textX += 60;
+            if (beforeLevel == 3) {
+              textX -= 60;
+            } else if (beforeLevel != 2) {
+              textX += 60;
+            }
             t.draw(textX, textY);
             textY += 60;
             break;

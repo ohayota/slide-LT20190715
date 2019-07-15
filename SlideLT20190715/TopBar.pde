@@ -14,7 +14,7 @@ class TopBar {
   
   void drawBase() {
     noStroke();
-    fill(navy);
+    fill(mainColor);
     rect(0, 0, width, barHeight);
   }
   
