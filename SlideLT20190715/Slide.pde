@@ -11,26 +11,34 @@ class Slide {
   Slide(boolean isCover, int number, String title, String subTitle) {
     topBar = new TopBar(height/8, title, subTitle, number);
     bottomBar = new BottomBar(height/12, slideName);
-    textField = new TextField(topBar.barHeight, bottomBar.barHeight, 50, 40);
+    textField = new TextField(topBar.barHeight, bottomBar.barHeight, 80, 60);
     this.number = number;
     this.isCover = isCover;
     this.title = title;
     this.subTitle = subTitle;
   }
   
+  void drawTitle() {
+    fill(navy);
+    textFont(yuGothic90);
+    textSize(90);
+    textAlign(CENTER, TOP);
+    text(title, width/2, height/2-160);
+  }
+  
+  void drawSubTitle() {
+    fill(darkGray);
+    textFont(yuGothic70);
+    textSize(50);
+    textAlign(CENTER, TOP);
+    text(subTitle, width/2, height/2+160);
+  }
+  
   void draw() {
     background(backColor);
     if (isCover) {
-      fill(navy);
-      textFont(yuGothic90);
-      textSize(90);
-      textAlign(CENTER, TOP);
-      text(title, width/2, height/2-100);
-      fill(darkGray);
-      textFont(yuGothic70);
-      textSize(50);
-      textAlign(CENTER, TOP);
-      text(subTitle, width/2, height/2+100);
+      drawTitle();
+      drawSubTitle();
     } else {
       topBar.draw();
       bottomBar.draw();
