@@ -7,7 +7,7 @@ class BottomBar {
   BottomBar(float barHeight, String title) {
     this.barHeight = barHeight;
     this.title = title;
-    image = new CroppedImage(ohayotaSq, barHeight*2/3, width-200, height-barHeight/2, darkGray);
+    image = new CroppedImage(ohayotaSq, barHeight*2/3, width-200, height-barHeight/2, darkGray, true);
   }
   
   void draw() {

@@ -7,6 +7,7 @@ class TextField {
   float fieldWidth;
   float fieldHeight;
   ArrayList<CroppedImage> images;
+  ArrayList<Image> imgs;
   ArrayList<Text> texts;
   
   TextField(float topBarHeight, float bottomBarHeight, float marginX, float marginY) {
@@ -14,9 +15,10 @@ class TextField {
     this.bottomBarHeight = bottomBarHeight;
     this.x = marginX;
     this.y = topBarHeight + marginY;
-    fieldWidth = width - x*2;
-    fieldHeight = height - (y+(bottomBarHeight+marginY));
+    fieldWidth = width - marginX*2;
+    fieldHeight = height - (y+bottomBarHeight+marginY);
     images = new ArrayList<CroppedImage>();
+    imgs = new ArrayList<Image>();
     texts = new ArrayList<Text>();
   }
   
@@ -54,11 +56,11 @@ class TextField {
             y += 50;
             break;
           default:
-            return;
         }
         beforeLevel = t.level;
       }
       for (CroppedImage img: images) img.draw();
+      for (Image img: imgs) img.draw();
     }
     popMatrix();
   }

@@ -2,10 +2,10 @@ void keyPressed() {
   if (!isKeyTyped) {
     switch (keyCode) {
       case LEFT:
-        if (0 < slideNum) { //<>// //<>//
+        if (0 < slideNum) { //<>//
           loop();
           slideNum--;
-        } //<>// //<>//
+        } //<>//
         break;
       case RIGHT:
         if (slideNum < slides.size()-1) {
