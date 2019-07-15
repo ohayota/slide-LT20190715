@@ -29,6 +29,7 @@ final color lightGray = color(200);
 void setup() {
   fullScreen();
   noStroke();
+  noCursor();
   imageMode(CENTER);
   frameRate(15);
   
@@ -101,9 +102,9 @@ void setup() {
   slide7.textField.texts.add(new Text("書いたコードを，すぐに図形や色などのビジュアルに反映できる", 2));
   slide7.textField.texts.add(new Text("簡単な文で図形を描くことができる", 2));
   slide7.textField.texts.add(new Text("未来大では1年前期の授業で扱う", 2));
-  slide7.textField.imgs.add(new Image(processingLogo, slide1.textField.fieldHeight/2,
-                                      slide1.textField.fieldWidth/2,
-                                      slide1.textField.fieldHeight*3/4, backColor, false));
+  slide7.textField.imgs.add(new Image(processingLogo, slide7.textField.fieldHeight/2,
+                                      slide7.textField.fieldWidth/2,
+                                      slide7.textField.fieldHeight*3/4, backColor, false));
   slides.add(slide7);
   
   Slide slide8 = new Slide(false, 8, "作品例", "");
@@ -123,40 +124,40 @@ void setup() {
   Slide slide10 = new Slide(false, 10, "ユークリッド互除法", "");
   slide10.textField.texts.add(new Text("アルゴリズムを使って描いてみる", 1));
   slide10.textField.texts.add(new Text("四角形を分割して描くプログラム", 2));
-  slide10.textField.imgs.add(new Image(divRect, slide1.textField.fieldHeight*2/3,
-                                       slide1.textField.fieldWidth/2,
-                                       slide1.textField.fieldHeight*2/3, backColor, false));
+  slide10.textField.imgs.add(new Image(divRect, slide10.textField.fieldHeight*2/3,
+                                       slide10.textField.fieldWidth/2,
+                                       slide10.textField.fieldHeight*2/3, backColor, false));
   slides.add(slide10);
   
   Slide slide11 = new Slide(false, 11, "ユークリッド互除法", "");
   slide11.textField.texts.add(new Text("色を追加してみる", 1));
   slide11.textField.texts.add(new Text("カラフルに表示するプログラム", 2));
-  slide11.textField.imgs.add(new Image(divRectColor, slide1.textField.fieldHeight*2/3,
-                                       slide1.textField.fieldWidth/2,
-                                       slide1.textField.fieldHeight*2/3, backColor, false));
+  slide11.textField.imgs.add(new Image(divRectColor, slide11.textField.fieldHeight*2/3,
+                                       slide11.textField.fieldWidth/2,
+                                       slide11.textField.fieldHeight*2/3, backColor, false));
   slides.add(slide11);
   
   Slide slide12 = new Slide(false, 12, "ユークリッド互除法", "");
   slide12.textField.texts.add(new Text("少し複雑にしてみる", 1));
   slide12.textField.texts.add(new Text("分割を増やして，カラフルに表示するプログラム", 2));
-  slide12.textField.imgs.add(new Image(rectDivRect, slide1.textField.fieldHeight*2/3,
-                                       slide1.textField.fieldWidth/2,
-                                       slide1.textField.fieldHeight*2/3, backColor, false));
+  slide12.textField.imgs.add(new Image(rectDivRect, slide12.textField.fieldHeight*2/3,
+                                       slide12.textField.fieldWidth/2,
+                                       slide12.textField.fieldHeight*2/3, backColor, false));
   slides.add(slide12);
   
   Slide slide13 = new Slide(false, 13, "ユークリッド互除法", "");
   slide13.textField.texts.add(new Text("ランダムな値にしてみる", 1));
   slide13.textField.texts.add(new Text("ランダムな値に対してユークリッド互除法を適用", 2));
   slide13.textField.texts.add(new Text("再帰を使って分割していくプログラム", 2));
-  slide13.textField.imgs.add(new Image(recurDivSq1, slide1.textField.fieldHeight*2/3,
-                                       slide1.textField.fieldWidth/2-slide1.textField.fieldHeight*2/3-20,
-                                       slide1.textField.fieldHeight*2/3, backColor, false));
-  slide13.textField.imgs.add(new Image(recurDivSq2, slide1.textField.fieldHeight*2/3,
-                                       slide1.textField.fieldWidth/2,
-                                       slide1.textField.fieldHeight*2/3, backColor, false));
-  slide13.textField.imgs.add(new Image(recurDivSq3, slide1.textField.fieldHeight*2/3,
-                                       slide1.textField.fieldWidth/2+slide1.textField.fieldHeight*2/3+20,
-                                       slide1.textField.fieldHeight*2/3, backColor, false));
+  slide13.textField.imgs.add(new Image(recurDivSq1, slide13.textField.fieldHeight*2/3,
+                                       slide13.textField.fieldWidth/2-slide1.textField.fieldHeight*2/3-20,
+                                       slide13.textField.fieldHeight*2/3, backColor, false));
+  slide13.textField.imgs.add(new Image(recurDivSq2, slide13.textField.fieldHeight*2/3,
+                                       slide13.textField.fieldWidth/2,
+                                       slide13.textField.fieldHeight*2/3, backColor, false));
+  slide13.textField.imgs.add(new Image(recurDivSq3, slide13.textField.fieldHeight*2/3,
+                                       slide13.textField.fieldWidth/2+slide1.textField.fieldHeight*2/3+20,
+                                       slide13.textField.fieldHeight*2/3, backColor, false));
   slides.add(slide13);
   
   Slide slide14 = new Slide(false, 14, "ランダム値を使った作品例", "");
@@ -169,18 +170,18 @@ void setup() {
   slide15.textField.texts.add(new Text("半透明な円の集合", 1));
   slide15.textField.texts.add(new Text("1-100のランダムな値で，中心からの距離を決定", 2));
   slide15.textField.texts.add(new Text("シアンとマゼンタの半透明な円を表示", 2));
-  slide15.textField.imgs.add(new Image(colorCloud, slide1.textField.fieldHeight*2/3,
-                                       slide1.textField.fieldWidth/2,
-                                       slide1.textField.fieldHeight*2/3, backColor, false));
+  slide15.textField.imgs.add(new Image(colorCloud, slide15.textField.fieldHeight*2/3,
+                                       slide15.textField.fieldWidth/2,
+                                       slide15.textField.fieldHeight*2/3, backColor, false));
   slides.add(slide15);
   
-  Slide slide16 = new Slide(false, 15, "0と1で線を描く", "");
+  Slide slide16 = new Slide(false, 16, "0と1で線を描く", "");
   slide16.textField.texts.add(new Text("4色の線だけで，太さを変えて描画", 1));
   slide16.textField.texts.add(new Text("0-1のランダムな値で，描画する高さを決定", 2));
   slide16.textField.texts.add(new Text("0-3のランダムな値で，描画する色を決定", 2));
-  slide16.textField.imgs.add(new Image(zeroToOne, slide1.textField.fieldHeight*2/3,
-                                       slide1.textField.fieldWidth/2,
-                                       slide1.textField.fieldHeight*2/3, backColor, false));
+  slide16.textField.imgs.add(new Image(zeroToOne, slide16.textField.fieldHeight*2/3,
+                                       slide16.textField.fieldWidth/2,
+                                       slide16.textField.fieldHeight*2/3, backColor, false));
   slides.add(slide16);
   
   Slide slide17 = new Slide(false, 17, "ジェネラティブアートの楽しさ", "");
