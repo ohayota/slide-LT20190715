@@ -20,24 +20,24 @@ class TopBar {
   
   void drawTitle() {
     fill(backColor);
-    textSize(70);
+    textSize(height/70);
     textFont(yuGothic70);
     textAlign(LEFT, CENTER);
-    text(title, 50, barHeight/2);
+    text(title, width/33.6, barHeight/2);
   }
   
   void drawSubTitle() {
-    textSize(30);
+    textSize(height/35);
     textFont(yuGothic30);
     textAlign(RIGHT, CENTER);
-    text(subTitle, width-150, barHeight/2);
+    text(subTitle, width*10.2/11.2, barHeight/2);
   }
   
   void drawNumber() {
-    textSize(50);
+    textSize(height/21);
     textFont(helvetica);
     textAlign(RIGHT, CENTER);
-    text(number, width-50, barHeight/2);
+    text(number, width*32.6/33.6, barHeight/2);
   }
   
   void draw() {

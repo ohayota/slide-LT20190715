@@ -11,7 +11,7 @@ class Slide {
   Slide(boolean isCover, int number, String title, String subTitle) {
     topBar = new TopBar(height/8, title, subTitle, number);
     bottomBar = new BottomBar(height/12, slideName);
-    textField = new TextField(topBar.barHeight, bottomBar.barHeight, 80, 60);
+    textField = new TextField(topBar.barHeight, bottomBar.barHeight, width/21, height/17.5);
     this.number = number;
     this.isCover = isCover;
     this.title = title;
@@ -21,17 +21,17 @@ class Slide {
   void drawTitle() {
     fill(mainColor);
     textFont(yuGothic90);
-    textSize(90);
+    textSize(height/11.7);
     textAlign(CENTER, TOP);
-    text(title, width/2, height/2-160);
+    text(title, width/2, height*4.5/13);
   }
   
   void drawSubTitle() {
     fill(subColor1);
-    textFont(yuGothic70);
-    textSize(50);
+    textFont(yuGothic50);
+    textSize(height/21);
     textAlign(CENTER, TOP);
-    text(subTitle, width/2, height/2+160);
+    text(subTitle, width/2, height*8.5/13);
   }
   
   void draw() {

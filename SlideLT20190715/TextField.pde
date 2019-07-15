@@ -37,26 +37,26 @@ class TextField {
         switch (t.level) {
           case 0:
             textX = 0;
-            textY += 60;
+            textY += height/17.5;
             break;
           case 1:
             textX = 0;
             t.draw(textX, textY);
-            textY += 70;
+            textY += height/15;
             break;
           case 2:
             if (beforeLevel == 3) {
-              textX -= 60;
+              textX -= width/28;
             } else if (beforeLevel != 2) {
-              textX += 60;
+              textX += width/28;
             }
             t.draw(textX, textY);
-            textY += 60;
+            textY += height/17.5;
             break;
           case 3:
-            if (beforeLevel != 3) textX += 60;
+            if (beforeLevel != 3) textX += width/28;
             t.draw(textX, textY);
-            textY += 50;
+            textY += height/21;
             break;
           default:
         }

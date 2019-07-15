@@ -14,16 +14,13 @@ class Text {
       case 2:
         fill(mainColor);
         noStroke();
-        ellipse(x-35, y+20, 25, 25);
-        fill(subColor1);
-        textFont(yuGothic50);
-        textSize(40);
+        ellipse(x-width/48, y+height/52.5, height/42, height/42);
         break;
       case 3:
         stroke(mainColor);
         strokeCap(SQUARE);
-        strokeWeight(4);
-        line(x-50, y+15, x-20, y+15);
+        strokeWeight(height/262.5);
+        line(x-width/33.6, y+height/70, x-width/60, y+height/70);
         break;
       default:
         return;
@@ -35,17 +32,17 @@ class Text {
       case 1:
         fill(mainColor);
         textFont(yuGothic50);
-        textSize(50);
+        textSize(height/21);
         break;
       case 2:
         fill(subColor1);
         textFont(yuGothic50);
-        textSize(40);
+        textSize(height/26.25);
         break;
       case 3:
         fill(subColor1);
         textFont(yuGothic30);
-        textSize(30);
+        textSize(height/35);
         break;
       default:
         return;

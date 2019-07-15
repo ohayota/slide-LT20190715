@@ -56,8 +56,8 @@ void createSlides() {
   s1.textField.texts.add(new Text("第3レベル", 3));
   s1.textField.texts.add(new Text("第3レベル", 3));
   s1.textField.cImages.add(new CroppedImage(dummy600, s1.textField.fieldWidth/3,
-                                           s1.textField.x + s1.textField.fieldWidth*7/10,
-                                           s1.textField.fieldHeight/2, backColor, false));
+                                            s1.textField.x + s1.textField.fieldWidth*7/10,
+                                            s1.textField.fieldHeight/2, backColor, false));
   slides.add(s1);
   // スライド2枚目
   Slide s2 = new Slide(false, 2, "タイトル", "サブタイトル");

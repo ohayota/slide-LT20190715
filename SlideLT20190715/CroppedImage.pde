@@ -53,7 +53,7 @@ class CroppedImage {
   void drawFrame() {
     // 切り抜いた画像の枠を描画
     noFill();
-    strokeWeight(5);
+    strokeWeight(size/100+2);
     stroke(mainColor);
     ellipse(x, y, size, size);
   }
